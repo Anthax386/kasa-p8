@@ -1,24 +1,13 @@
+import Cover from "../../components/Cover";
+import CarteLogement from "../../components/Logements";
 
-
-function App() {
+function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+        <Cover />
+        <CarteLogement />
     </div>
   );
 }
 
-export default App;
+export default Home;
