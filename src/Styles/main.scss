@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import '../pages/Home/home.scss';
+@import '../pages/Error/error.scss';
+@import '../pages/FicheLogement/ficheLogement.scss';
+@import '../pages/Propos/propos.scss';
+
+@import '../components/Header/header.scss';
+
+@import '../components/Cover/Cover.scss';
+@import '../components/AboutCover/AboutCover.scss';
+@import '../components/Logements/logements.scss';
+@import '../components/Dropdown/dropdown.scss';
+
+@import '../components/Footer/footer.scss';
+
+body {
+    padding: 0;
+    margin: 0;
+}
+#root {
+    padding: 0;
+}
