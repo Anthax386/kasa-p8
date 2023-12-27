@@ -1,0 +1,26 @@
+.Header-div {
+    padding: 0 100px;
+    header {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        nav {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            a {
+                color: #FF6060;
+                text-align: right;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 142.6%; /* 34.224px */
+                text-decoration: none;
+            }
+        }
+    }
+}
+
