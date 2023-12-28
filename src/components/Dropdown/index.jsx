@@ -23,7 +23,7 @@ function DropDown () {
 }
 
 function dropdown(about){
-    console.log(about)
+
     const arrow = document.querySelector(`#${about.name}`)
     const text = document.querySelector(`#${about.name}text`)
     if (about.isOpen === false ) { 
