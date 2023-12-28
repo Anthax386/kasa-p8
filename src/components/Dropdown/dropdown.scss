@@ -4,23 +4,88 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    .dropdown {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-        border-radius: 5px;
-        background:  #FF6060;
-        p {
-            color: #fff;
+    position: relative;
+    article {
+        max-height: fit-content;
+        border-radius: 10px 10px 5px 5px;
+        background: #F6F6F6;
+        .aboutText {
+            color:#FF6060;
+            opacity: 0;
+            transform: scaleY(0);
+            padding: 20px;
+            p {
+                padding: 0;
+                margin: 0;
+                color: #FF6060;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+            }
         }
-        .arrow {
-            width: 8px;
-            height: 8px;
-            border-bottom: 1px solid #fff;
-            border-right: 1px solid #fff;
-            transform: rotate(45deg);
+        .hidden {
+            display: none;
         }
+        .dropdown {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background:  #FF6060;
+            cursor: pointer;
+            p {
+                margin: 0;
+                color: #FFF;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+            }
+            svg {
+                width: 32px;
+                height: 32px;
+                flex-shrink: 0;
+            }
+        }     
+    }
+}
+
+@keyframes arrowDown {
+    0%{
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+@keyframes arrowUp {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@keyframes showText {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+@keyframes hideText {
+    0%{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scaleY(0);
+        opacity: 0;
     }
 }
