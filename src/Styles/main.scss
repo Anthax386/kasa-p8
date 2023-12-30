@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+// Pages
 @import '../pages/Home/home.scss';
 @import '../pages/Error/error.scss';
 @import '../pages/FicheLogement/ficheLogement.scss';
 @import '../pages/Propos/propos.scss';
 
+// Components
 @import '../components/Header/header.scss';
 
 @import '../components/Cover/Cover.scss';
@@ -15,6 +17,9 @@
 @import '../components/LogementInfo/logementinfo.scss';
 
 @import '../components/Footer/footer.scss';
+
+//breakpoints
+@import './breakpoints.scss';
 
 body {
     padding: 0;
