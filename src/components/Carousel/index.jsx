@@ -21,6 +21,7 @@ function Carousel () {
                                 type: 'fraction',
                             }}
                             navigation={true}
+                            loop={true}
                             modules={[Pagination, Navigation]}
                         >
                             {/* Slides */}
