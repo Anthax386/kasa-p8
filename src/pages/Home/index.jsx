@@ -1,11 +1,11 @@
-import Cover from "../../components/Cover";
-import CarteLogement from "../../components/Logements";
+import HomeBanner from "../../components/Home Banner";
+import LogementCards from "../../components/Cards";
 
 function Home() {
   return (
     <div className="home">
-        <Cover />
-        <CarteLogement />
+        <HomeBanner />
+        <LogementCards />
     </div>
   );
 }

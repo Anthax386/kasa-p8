@@ -1,6 +1,6 @@
 import cover from '../../assets/homeBanner.png'
 
-function Cover () {
+function HomeBanner () {
     return (       
         <div className='cover'>
             <img src={cover} alt="Chez vous, partout ailleurs" />
@@ -9,4 +9,4 @@ function Cover () {
     )
 }
 
-export default Cover
+export default HomeBanner

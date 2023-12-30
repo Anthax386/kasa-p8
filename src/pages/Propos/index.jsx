@@ -1,11 +1,11 @@
 import AboutCover from "../../components/AboutCover"
-import DropDown from "../../components/Dropdown"
+import Collapse from "../../components/Collapse"
 
 function Propos() {
     return (
         <div className="Propos">
             <AboutCover />
-            <DropDown />
+            <Collapse />
         </div>
     )
 }

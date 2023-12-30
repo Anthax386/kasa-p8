@@ -1,11 +1,11 @@
-import Carousel from "../../components/Carousel"
+import Slideshow from "../../components/Slideshow"
 import LogementInfo from "../../components/LogementInfo"
 
 
 function FicheLogement () {
     return (
         <div className="ficheLogement">
-            <Carousel />
+            <Slideshow />
             <LogementInfo />
         </div>
         

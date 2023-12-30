@@ -1,6 +1,6 @@
 import abouts from '../../data/about.json'
 
-function DropDown () {
+function Collapse () {
     return (
         <section className="Dropdowm-div">       
             {abouts.map((about) => {
@@ -39,4 +39,4 @@ function dropdown(about){
     }
 }
 
-export default DropDown
+export default Collapse

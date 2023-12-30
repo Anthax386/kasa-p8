@@ -6,11 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import logements from '../../data/logements.json'
 
-function Carousel () {
+function Slideshow () {
 
     const { idLogement } = useParams ();
     return (
-        <section className='carousel'>
+        <section className='slideshow'>
             {logements.map((e) => {
                 if(e.id === idLogement) {
                     const logement = e
@@ -39,4 +39,4 @@ function Carousel () {
     
 }
 
-export default Carousel
+export default Slideshow

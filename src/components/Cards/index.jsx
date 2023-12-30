@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import logements from '../../data/logements.json'
 
-function CarteLogement () {
+function LogementCards () {
     return (
         <section className='logements-section'>
             {logements.map((logement) => {
@@ -17,4 +17,4 @@ function CarteLogement () {
     )
 }
 
-export default CarteLogement
+export default LogementCards
