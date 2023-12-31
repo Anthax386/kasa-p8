@@ -45,76 +45,13 @@ function LogementInfo () {
                             return (<div key={index} className='tag'>{tag}</div>)
                         })}
                     </div>
-                    <Rating  rate = {logement.rating}/>
+                    <Rating rate = {logement.rating}/>
                 </div>
                 <Collapse collapses={collapses}/>
             </div>
                     
         </section>
     )
-}
-
-let descriptionIsOpen = false
-let equipementIsOpen = false
-
-function dropdown(e) {
-    const arrow = document.querySelector('#'+e)
-    const text = document.querySelector('#'+e+'-text')
-    
-    function showText() {
-        arrow.style.animation='arrowDown 100ms ease-in-out forwards'
-        text.style.animation='showText 100ms ease-in-out forwards'
-        text.classList.remove('hidden')
-    }
-    function hideText() {
-        arrow.style.animation='arrowUp 100ms ease-in-out forwards'
-        text.style.animation='hideText 100ms ease-in-out forwards'
-        text.classList.add('hidden')
-    }
-    
-    switch (e) {
-        case 'equipement' : {
-            console.log(text)
-            switch (equipementIsOpen) {
-                case false : {
-                    showText()
-                    equipementIsOpen = true
-                    break
-                }
-                case true : {
-                    hideText()
-                    equipementIsOpen = false
-                    break
-                }
-                default : {
-                    break
-                }
-            }
-            break       
-        }
-        case 'description' : {
-            console.log(text)
-            switch (descriptionIsOpen) {
-                case false : {
-                    showText()
-                    descriptionIsOpen = true
-                    break
-                }
-                case true : {
-                    hideText();
-                    descriptionIsOpen = false
-                    break
-                }
-                default : {
-                    break
-                }
-            }
-            break
-        }
-        default : {
-            break
-        }
-    }
 }
 
 export default LogementInfo
