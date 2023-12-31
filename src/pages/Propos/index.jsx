@@ -1,11 +1,13 @@
-import AboutCover from "../../components/AboutCover"
+import banner from "../../assets/aboutBanner.png"
+import Banner from "../../components/Banner"
 import Collapse from "../../components/Collapse"
+import about from '../../data/about.json'
 
 function Propos() {
     return (
         <div className="Propos">
-            <AboutCover />
-            <Collapse />
+            <Banner img={banner}/>
+            <Collapse collapses={about}/>
         </div>
     )
 }

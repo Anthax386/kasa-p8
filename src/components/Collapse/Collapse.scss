@@ -5,11 +5,11 @@
     flex-direction: column;
     gap: 30px;
     position: relative;
-    article {
+    .dropdown {
         max-height: fit-content;
         border-radius: 10px 10px 5px 5px;
         background: #F6F6F6;
-        .aboutText {
+        .dropdown-text {
             color:#FF6060;
             opacity: 0;
             transform: scaleY(0);
@@ -27,7 +27,7 @@
         .hidden {
             display: none;
         }
-        .dropdown {
+        .dropdown-title {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
