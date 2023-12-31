@@ -7,36 +7,31 @@ import 'swiper/css/pagination';
 import logements from '../../data/logements.json'
 
 function Slideshow () {
-
     const { idLogement } = useParams ();
+    let logement
+    logements.map((e) => {
+        if(e.id === idLogement) {
+            logement = e
+        }
+        return logement
+    })
     return (
         <section className='slideshow'>
-            {logements.map((e) => {
-                if(e.id === idLogement) {
-                    const logement = e
-                    const logementPic = e.pictures
-                    return (
-                        <Swiper
-                            pagination={{
-                                type: 'fraction',
-                            }}
-                            navigation={true}
-                            loop={true}
-                            modules={[Pagination, Navigation]}
-                        >
-                            {/* Slides */}
-                            {logementPic.map((pic) =>{
-                                return <SwiperSlide><img src={pic} alt={logement.title} /></SwiperSlide>
-                            })}
-                        </Swiper>
-                        
-                    )
-                }
-                return null
-            })}
+            <Swiper 
+                pagination={{
+                    type: 'fraction',
+                }}
+                navigation={true}
+                loop={true}
+                modules={[Pagination, Navigation]}
+                >
+                {/* Slides */}
+                {logement.pictures.map((pic, index) =>{
+                    return <SwiperSlide><img key={index} src={pic} alt={logement.title} /></SwiperSlide>
+                })}
+            </Swiper>
         </section>
     )
-    
 }
 
 export default Slideshow
