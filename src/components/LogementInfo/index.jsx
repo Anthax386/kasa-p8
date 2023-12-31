@@ -1,68 +1,55 @@
 import { useParams } from 'react-router-dom'
-
 import logements from '../../data/logements.json'
+import Collapse from '../Collapse';
+import Rating from '../Rating';
 
 function LogementInfo () {
     const { idLogement } = useParams ();
+    let logement
+    logements.map((e) => {
+        if(e.id === idLogement) {
+            logement = e
+        }
+        return logement
+    })
+
+    const collapses = [
+        {
+            'name' : 'Description',
+            'txt' : logement.description,
+            'isOpen': false
+        },
+        {
+            'name' : 'Équipements',
+            'txt': logement.equipments,
+            'isOpen': false
+        }
+    ]
+    
     return (
-        <section>
-            {logements.map((e) => {
-                if (e.id === idLogement) {
-                    const logement = e
-                    return (
-                        <div className='logement-infos'>
-                            <div className='logement'>
-                                <div className='logement-title'>   
-                                    <h2>{logement.title}</h2>
-                                    <p>{logement.location}</p>
-                                </div>
-                                <div className='logement-hote'>
-                                    <p>{logement.host.name}</p>
-                                    <img src={logement.host.picture} alt={logement.host.name} />
-                                </div>
-                            </div>
-                            <div className='tags-rates'>
-                                <div className='tags'>
-                                    {logement.tags.map((tag) => {
-                                        return (<div className='tag'>{tag}</div>)
-                                    })}
-                                </div>
-                                <div className='rates'>
-                                    
-                                </div>
-                            </div>
-                            <div className='dropdowns'>
-                                <div className='dropdown'>
-                                    <div className='dropdown-title' onClick={() => dropdown('description')}>
-                                        <p>Description</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" id='description'>
-                                            <path d="M15.2897 10.7897C15.9591 10.1202 17.0462 10.1202 17.7157 10.7897L27.9979 21.0719C28.6674 21.7414 28.6674 22.8285 27.9979 23.4979C27.3285 24.1673 26.2414 24.1673 25.572 23.4979L16.5 14.4259L7.42804 23.4926C6.75862 24.162 5.67148 24.162 5.00206 23.4926C4.33265 22.8231 4.33265 21.736 5.00206 21.0666L15.2843 10.7843L15.2897 10.7897Z" fill="white"/>
-                                        </svg> 
-                                    </div>
-                                    <div className='dropdown-text hidden' id='description-text'>
-                                        <p>{logement.description}</p>
-                                    </div>
-                                </div>
-                                <div className='dropdown'>
-                                    <div className='dropdown-title' onClick={() => dropdown('equipement')}>
-                                        <p>Équipements</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" id='equipement'>
-                                            <path d="M15.2897 10.7897C15.9591 10.1202 17.0462 10.1202 17.7157 10.7897L27.9979 21.0719C28.6674 21.7414 28.6674 22.8285 27.9979 23.4979C27.3285 24.1673 26.2414 24.1673 25.572 23.4979L16.5 14.4259L7.42804 23.4926C6.75862 24.162 5.67148 24.162 5.00206 23.4926C4.33265 22.8231 4.33265 21.736 5.00206 21.0666L15.2843 10.7843L15.2897 10.7897Z" fill="white"/>
-                                        </svg> 
-                                    </div>
-                                    <div className='dropdown-text hidden' id='equipement-text'>
-                                        <ul>
-                                            {logement.equipments.map((e) => {
-                                                return (<li>{e}</li>)
-                                            })}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                } return null
-            })}
+        <section>    
+            <div className='logement-infos'>
+                <div className='logement'>
+                    <div className='logement-title'>   
+                        <h2>{logement.title}</h2>
+                        <p>{logement.location}</p>
+                    </div>
+                    <div className='logement-hote'>
+                        <p>{logement.host.name}</p>
+                        <img src={logement.host.picture} alt={logement.host.name} />
+                    </div>
+                </div>
+                <div className='tags-rates'>
+                    <div className='tags'>
+                        {logement.tags.map((tag, index) => {
+                            return (<div key={index} className='tag'>{tag}</div>)
+                        })}
+                    </div>
+                    <Rating  rate = {logement.rating}/>
+                </div>
+                <Collapse collapses={collapses}/>
+            </div>
+                    
         </section>
     )
 }
