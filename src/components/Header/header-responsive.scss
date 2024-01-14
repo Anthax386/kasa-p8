@@ -1,0 +1,22 @@
+@import '../../Styles/breakpoints.scss';
+
+.Header-div {
+    @include respond-to('small'){
+        margin: 0;
+        padding: 20px;
+        height: 50px;
+        header {
+            margin: 0;
+            img {
+                height: 50px;
+            }
+            nav {
+                gap: 25px;
+                a {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+} 
