@@ -1,30 +1,22 @@
-import { useParams } from 'react-router-dom'
-import logements from '../../data/logements.json'
 import Collapse from '../Collapse';
 import Rating from '../Rating';
+import Tag from '../Tag';
 
-function LogementInfo () {
-    const { idLogement } = useParams ();
-    let logement
-    logements.map((e) => {
-        if(e.id === idLogement) {
-            logement = e
-        }
-        return logement
-    })
-
+function LogementInfo ({logement}) {
+    
     const collapses = [
         {
             'name' : 'Description',
-            'txt' : logement.description,
-            'isOpen': false
+            'txt' : logement.description
         },
         {
             'name' : 'Équipements',
-            'txt': logement.equipments,
-            'isOpen': false
+            'txt': logement.equipments
         }
     ]
+
+    const rate = parseFloat(logement.rating);
+    
     
     return (
         <section>    
@@ -42,12 +34,20 @@ function LogementInfo () {
                 <div className='tags-rates'>
                     <div className='tags'>
                         {logement.tags.map((tag, index) => {
-                            return (<div key={index} className='tag'>{tag}</div>)
+                            return <Tag tag = {tag} index ={index}/>
                         })}
                     </div>
-                    <Rating rate = {logement.rating}/>
+                    <div className="rating">
+                        <Rating rate ={rate} />
+                    </div>
                 </div>
-                <Collapse collapses={collapses}/>
+                <section className="Dropdowm-div">
+                    {collapses.map((e) => {
+                        return <Collapse collapse={e}/>
+                    })}
+                </section>
+                
+                
             </div>
                     
         </section>
