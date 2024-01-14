@@ -1,0 +1,7 @@
+@import '../../Styles/breakpoints.scss';
+
+.ficheLogement {
+    @include respond-to ('small') {
+        padding: 20px;
+    }
+}

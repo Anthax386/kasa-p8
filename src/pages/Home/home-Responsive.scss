@@ -1,0 +1,12 @@
+@import '../../Styles/breakpoints.scss';
+
+.home  {
+    @include respond-to('medium') {
+        padding: 50px 0;
+    }
+    @include respond-to('small'){
+        padding: 20px;
+        margin: 0;
+        gap: 20px;
+    }
+}
