@@ -10,7 +10,9 @@
         object-fit: cover;
         opacity: 0.7;
         position: absolute;
-        top: -200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     h1 {
         margin: 0;
