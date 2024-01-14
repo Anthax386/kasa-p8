@@ -7,7 +7,11 @@ function Propos() {
     return (
         <div className="Propos">
             <Banner img={banner}/>
-            <Collapse collapses={about}/>
+            <section className="Dropdowm-div">
+                {about.map((e) => {
+                    return <Collapse collapse={e}/>
+                })}
+            </section>
         </div>
     )
 }
