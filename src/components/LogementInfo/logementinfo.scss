@@ -60,84 +60,19 @@
             display: flex;
             flex-direction: row;
             gap: 10px;
-            .tag {
-                padding: 2px 30px;
-                border-radius: 10px;
-                background: #FF6060;
-                color: #fff;
-                text-align: center;
-                font-family: Montserrat;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-            }
         }
     }
     .Dropdowm-div {
-        display: flex;
-        flex-direction: row;
-        gap: 6%;
-        .dropdown {
-            width: 47%;
-            height: fit-content;
-            border-radius: 10px 10px 5px 5px;
-            background: #F6F6F6;
-            .dropdown-title {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 15px;
-                border-radius: 5px;
-                background:  #FF6060;
-                cursor: pointer;
-                p {
-                    margin: 0;
-                    color: #FFF;
-                    font-family: Montserrat;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 500;
-                }
-                svg {
-                    width: 32px;
-                    height: 32px;
-                    flex-shrink: 0;
-                }
-            } 
-            .dropdown-text {
-                color:#FF6060;
-                opacity: 0;
-                transform: scaleY(0);
-                padding: 20px;
-                p {
-                    padding: 0;
-                    margin: 0;
-                    color: #FF6060;
-                    font-family: Montserrat;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                }
-                ul {
-                    padding: 0;
-                    margin: 0;
-                }
-                li {
-                    color: #FF6060;
-                    font-family: Montserrat;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    list-style: none;
-                }
-            }
-            .hidden {
-                display: none;
+        div {
+            flex-direction: row;
+            gap: 6%;
+            .dropdown {
+                width: 47%;
             }
         }
     }
 }
+
 
 @keyframes arrowDown {
     0%{

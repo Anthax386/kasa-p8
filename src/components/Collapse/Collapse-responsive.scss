@@ -1,0 +1,18 @@
+@include respond-to ('small') {
+    .Dropdowm-div {
+        div {
+            .dropdown {
+                width: 100%;
+                .dropdown-title {
+                    height: 30px;
+                    p {
+                        font-size: 13px;
+                    }
+                    li {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

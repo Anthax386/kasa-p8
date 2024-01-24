@@ -1,18 +1,28 @@
 @import '../../Styles/breakpoints.scss';
-.logements-section {
-    @include respond-to ('medium') {
+
+@include respond-to ('medium') {
+    .logements-section{
         border-radius: 0;
-        .logements-card {
+        .logement-card {
             width: 45%;
         }
-    }
-    @include respond-to('small'){
+    } 
+}
+@include respond-to('small'){
+    .logements-section{
         padding: 0;
         border-radius: 0;
         background: none;
-        .logements-card {
+        flex-direction: column;
+        .logement-card {
+            padding: 0;
+            margin: 0;
             width: 100%;
             height: 225px;
+            .logement-card-link {
+                width: 100%;
+                height: 100%;
+            }
         }
-    }
+    }  
 }

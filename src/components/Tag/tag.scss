@@ -1,0 +1,20 @@
+.tag {
+    width: 115px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FF6060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+    }
+}

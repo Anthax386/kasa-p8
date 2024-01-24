@@ -17,12 +17,11 @@ function LogementInfo ({logement}) {
 
     const rate = parseFloat(logement.rating);
     
-    
     return (
         <section>    
             <div className='logement-infos'>
                 <div className='logement'>
-                    <div className='logement-title'>   
+                    <div className='logement-title'>
                         <h2>{logement.title}</h2>
                         <p>{logement.location}</p>
                     </div>
@@ -34,16 +33,16 @@ function LogementInfo ({logement}) {
                 <div className='tags-rates'>
                     <div className='tags'>
                         {logement.tags.map((tag, index) => {
-                            return <Tag tag = {tag} index ={index}/>
+                            return <div key={index}><Tag tag = {tag} index ={index}/></div>
                         })}
                     </div>
                     <div className="rating">
-                        <Rating rate ={rate} />
+                        <Rating rate = {rate} />
                     </div>
                 </div>
                 <section className="Dropdowm-div">
-                    {collapses.map((e) => {
-                        return <Collapse collapse={e}/>
+                    {collapses.map((e, index) => {
+                        return <div key={index}><Collapse collapse={e}/></div>
                     })}
                 </section>
                 

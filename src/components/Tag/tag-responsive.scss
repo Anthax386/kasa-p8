@@ -1,0 +1,10 @@
+@include respond-to ('small') {
+    .tag {
+        width: 84px;
+        height: 18px;
+        flex-shrink: 0;
+        p {
+            font-size: 10px;
+        }
+    }
+}

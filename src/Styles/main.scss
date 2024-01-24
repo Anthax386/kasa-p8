@@ -3,34 +3,55 @@
 // Pages
 @import '../pages/Home/home.scss';
 @import '../pages/Home/home-Responsive.scss';
+
 @import '../pages/Error/error.scss';
+
 @import '../pages/FicheLogement/ficheLogement.scss';
 @import '../pages/FicheLogement/ficheLogement-responsive.scss';
+
 @import '../pages/Propos/propos.scss';
 
 // Components
 @import '../components/Header/header.scss';
 @import '../components/Header/header-responsive.scss';
+
 @import '../components/Banner/banner.scss';
 @import '../components/Banner/banner-responsive.scss';
+
 @import '../components/LogementCards/Cards.scss';
 @import '../components/LogementCards/cards-responsive.scss';
+
 @import '../components/Collapse/Collapse.scss';
-@import '../components/Slideshow/Slideshow.scss';
+@import '../components/Collapse/Collapse-responsive.scss';
+
 @import '../components/LogementInfo/logementinfo.scss';
+@import '../components/LogementInfo/logementinfo-responsive.scss';
+
 @import '../components/Rating/rating.scss';
+@import '../components/Rating/rating-responsive.scss';
+
+@import '../components/Tag/tag.scss';
+@import '../components/Tag/tag-responsive.scss';
+
+@import '../components/Slider/slider.scss';
+@import '../components/Slider/slider-responsive.scss';
+
 @import '../components/Footer/footer.scss';
 @import '../components/Footer/footer-responsive.scss';
 
 //breakpoints
 @import './breakpoints.scss';
 
-html body {
+html, body, #root {
+    min-height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: Montserrat;
 }
 #root {
-    min-height: 94vh;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 1;
 }

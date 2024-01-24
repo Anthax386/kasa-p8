@@ -1,6 +1,6 @@
 function Tag ({tag, index}) {
     return (
-        <div key={index} className='tag'>{tag}</div>
+        <div key={index} className='tag'><p>{tag}</p></div>
     )
 }
 

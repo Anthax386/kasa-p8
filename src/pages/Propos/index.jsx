@@ -8,8 +8,8 @@ function Propos() {
         <div className="Propos">
             <Banner img={banner}/>
             <section className="Dropdowm-div">
-                {about.map((e) => {
-                    return <Collapse collapse={e}/>
+                {about.map((e, index) => {
+                    return <div className='dropdown' key={index}><Collapse collapse={e}/></div>
                 })}
             </section>
         </div>

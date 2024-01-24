@@ -1,0 +1,12 @@
+@include respond-to('small') {
+    .slider {
+        height: 255px;
+        .arrow{
+            height: 24px;
+            width: 24px;           
+        }
+        .pagination {
+            display: none;
+        }
+    }
+}

@@ -10,8 +10,8 @@ function Home() {
     <div className="home">
         <Banner img={banner} title = {title}/>
         <section className='logements-section'>
-          {logements.map((e) => {
-            return <LogementCards logement ={e}/>
+          {logements.map((e, index) => {
+            return <div key={index}><LogementCards logement ={e}/></div>
           })}
         </section>
     </div>
