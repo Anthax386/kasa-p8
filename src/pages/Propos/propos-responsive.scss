@@ -1,0 +1,13 @@
+@include respond-to ('small') {
+    .Propos {
+        padding: 20px;
+        .Dropdowm-div {
+            padding: 0;
+            div {
+                .dropdown {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

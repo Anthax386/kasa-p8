@@ -1,6 +1,5 @@
 @include respond-to ('small') {
     .Dropdowm-div {
-        div {
             .dropdown {
                 width: 100%;
                 .dropdown-title {
@@ -8,11 +7,16 @@
                     p {
                         font-size: 13px;
                     }
-                    li {
-                        font-size: 13px;
+                    svg {
+                        width: 22px;
+                        height: 22px;
                     }
                 }
-            }
-        }
+                .dropdown-text {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }  
     }
 }

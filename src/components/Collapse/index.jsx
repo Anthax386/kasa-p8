@@ -23,7 +23,7 @@ function Collapse ({collapse}) {
     }
 
     return (
-        <article key={collapse.name} className='dropdown'>
+        <div>
             <div className="dropdown-title" onClick={() => openCloseCollapse()}>
                 <p>{collapse.name}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" id={collapse.name}>
@@ -33,7 +33,7 @@ function Collapse ({collapse}) {
             <div className="dropdown-text hidden" id={collapse.name+'text'}>
                 <p>{collapse.txt}</p>
             </div>
-        </article>
+        </div>
     )
 }
 

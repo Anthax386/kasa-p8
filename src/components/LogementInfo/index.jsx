@@ -10,7 +10,7 @@ function LogementInfo ({logement}) {
             'txt' : logement.description
         },
         {
-            'name' : 'Équipements',
+            'name' : 'Equipements',
             'txt': logement.equipments
         }
     ]
@@ -42,7 +42,7 @@ function LogementInfo ({logement}) {
                 </div>
                 <section className="Dropdowm-div">
                     {collapses.map((e, index) => {
-                        return <div key={index}><Collapse collapse={e}/></div>
+                        return <article key={index} className='dropdown'><Collapse collapse={e}/></article>
                     })}
                 </section>
                 

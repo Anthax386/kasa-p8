@@ -29,12 +29,10 @@
             gap: 24px;
         }
         .Dropdowm-div {
+            flex-direction: column;
+            gap: 15px;
             margin: 0;
             padding: 0;
-            div {
-                flex-direction: column;
-                padding: 0;
-                margin: 0;
                 .dropdown {
                     width: 100%;
                     .dropdown-title {
@@ -47,4 +45,3 @@
             }
         }        
     }
-}

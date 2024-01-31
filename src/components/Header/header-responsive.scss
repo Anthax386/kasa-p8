@@ -1,7 +1,5 @@
-@import '../../Styles/breakpoints.scss';
-
-.Header-div {
-    @include respond-to('small'){
+@include respond-to('small'){
+    .Header-div {
         margin: 0;
         padding: 20px;
         height: 50px;

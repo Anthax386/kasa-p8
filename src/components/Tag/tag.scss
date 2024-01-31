@@ -1,6 +1,7 @@
 .tag {
-    width: 115px;
+    min-width: 115px;
     height: 25px;
+    padding:0 10px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FF6060;

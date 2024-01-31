@@ -1,6 +1,6 @@
 @include respond-to ('small') {
     .tag {
-        width: 84px;
+        min-width: 84px;
         height: 18px;
         flex-shrink: 0;
         p {
